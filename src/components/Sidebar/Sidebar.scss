@@ -1,0 +1,15 @@
+.sidebar {
+  background-color: black;
+  min-height: calc(100vh - 50px);
+  border-top: 2px solid grey;
+
+  &__links {
+    font-size: 18px;
+    margin: 5px 10px 0 10px;
+    padding: 10px;
+
+    &:hover {
+      background-color: rgb(20, 20, 20);
+    }
+  }
+}

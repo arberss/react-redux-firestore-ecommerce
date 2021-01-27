@@ -1,0 +1,41 @@
+.add {
+  margin: 20px 0;
+
+  &__content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__group {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  &__input {
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+    padding: 5px;
+  }
+
+  &__area {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    height: 150px;
+
+    resize: none;
+  }
+
+  &__btn {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    border: none;
+    padding: 5px;
+    background-color: rgb(187, 182, 182);
+    cursor: pointer;
+  }
+}

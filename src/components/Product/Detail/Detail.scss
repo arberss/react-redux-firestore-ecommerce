@@ -1,0 +1,58 @@
+.detail {
+  display: flex;
+  margin-top: 25px;
+
+  &__image {
+    flex: 1;
+  }
+
+  &__img {
+    max-width: 400px;
+    width: 100%;
+    // height: 450px;
+    max-height: 100%;
+  }
+
+  &__content {
+    flex: 2;
+    margin: 0 20px;
+  }
+
+  &__category {
+    display: block;
+    margin: 10px 0;
+  }
+
+  &__description {
+    margin: 10px 0;
+  }
+
+  &__btn {
+    border: none;
+    padding: 8px 15px;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &--back {
+      background-color: khaki;
+    }
+
+    &--tocart {
+      background-color: rgb(85, 182, 85);
+    }
+
+    &--remove {
+      background-color: rgb(226, 133, 133);
+    }
+
+    &--update {
+      background-color: rgb(183, 247, 147);
+    }
+
+    &--later {
+      background-color: gainsboro;
+      color: black;
+    }
+  }
+}

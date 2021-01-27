@@ -1,0 +1,43 @@
+.home {
+  background-color: rgb(194, 221, 221);
+  .content {
+    display: flex;
+    height: calc(100vh - 50px);
+
+    &__women {
+      width: 100%;
+      background-image: url('../../assets/women-fashion.jpg');
+      background-size: cover;
+      background-position: center;
+      border-right: 2px solid black;
+      position: relative;
+    }
+
+    &__men {
+      width: 100%;
+      background-image: url('../../assets/men-fashion.jpg');
+      background-size: cover;
+      position: relative;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      font-size: 20px;
+      border: none;
+      padding: 10px 15px;
+      width: 100px;
+      color: white;
+      background-color: rgb(114, 103, 182);
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(143, 135, 192);
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.update {
+  display: flex;
+  justify-content: center;
+
+  &__btn {
+    margin: 20px 20px 0 0;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(167, 162, 162);
+    cursor: pointer;
+  }
+}
