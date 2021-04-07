@@ -11,20 +11,11 @@ import PulseLoader from 'react-spinners/PulseLoader';
 function Login() {
   const [checkClick, setCheckClick] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
 
   const history = useHistory();
   const dispatch = useDispatch();
 
   const { register, handleSubmit, errors } = useForm();
-
-  // const handleLogin = (e) => {
-  //   e.preventDefault();
-
-  //   dispatch(signIn(email, password));
-  //   history.push('/products');
-  // };
 
   firestoreConnect({
     collection: 'users',
@@ -118,15 +109,6 @@ function Login() {
           </button>
         )}
 
-        {/* <button
-          onClick={() => setCheckClick(true)}
-          className='btn'
-          type='submit'
-          disabled={isLoading}
-        >
-          Login
-        </button> */}
-
         <div className='form-link'>
           Need an account?
           <Link className='link auth-link' to='/signup'>
@@ -136,41 +118,6 @@ function Login() {
       </form>
     </div>
   );
-
-  // return (
-  //   <div className='container'>
-  //     <form className='auth-form' onSubmit={handleLogin}>
-  //       <div className='form-title'>Login</div>
-  //       <div className='form-group'>
-  //         <label htmlFor='email'>Email</label>
-  //         <input
-  //           type='text'
-  //           name='email'
-  //           onChange={(e) => setEmail(e.target.value)}
-  //         />
-  //       </div>
-  //       <div className='form-group'>
-  //         <label htmlFor='password'>Password</label>
-  //         <input
-  //           type='password'
-  //           name='password'
-  //           onChange={(e) => setPassword(e.target.value)}
-  //         />
-  //       </div>
-
-  //       <button className='btn' type='submit'>
-  //         Login
-  //       </button>
-
-  //       <div className='form-link'>
-  //         Need an account?
-  //         <Link className='link auth-link' to='/signup'>
-  //           Signup
-  //         </Link>
-  //       </div>
-  //     </form>
-  //   </div>
-  // );
 }
 
 export default Login;

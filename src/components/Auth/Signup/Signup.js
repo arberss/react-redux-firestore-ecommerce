@@ -10,11 +10,6 @@ import PulseLoader from 'react-spinners/PulseLoader';
 function Signup() {
   const [checkClick, setCheckClick] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
-  // const [confPassword, setConfPassword] = useState('');
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -28,25 +23,6 @@ function Signup() {
   const checkEmail = useSelector(
     ({ firestore: { ordered } }) => ordered && ordered.users
   );
-
-  // const isAuth = useSelector((state) => state.auth.isAuth);
-  // const checkError = useSelector((state) => state.auth.authError);
-
-  // const handleSignup = (e) => {
-  //   e.preventDefault();
-
-  //   const creds = {
-  //     firstName,
-  //     lastName,
-  //     email,
-  //     password,
-  //     confPassword,
-  //   };
-
-  //   if (password !== confPassword) return;
-  //   dispatch(signUp(creds));
-  //   history.push('/products');
-  // };
 
   const onSubmit = async (data) => {
     const { firstName, lastName, email, password, confPassword } = data;
@@ -186,14 +162,6 @@ function Signup() {
           </button>
         )}
 
-        {/* <button
-          onClick={() => setCheckClick(true)}
-          className='btn'
-          type='submit'
-        >
-          Signup
-        </button> */}
-
         <div className='form-link'>
           Already have an account?
           <Link className='link auth-link' to='/login'>
@@ -203,65 +171,6 @@ function Signup() {
       </form>
     </div>
   );
-
-  // return (
-  //   <div className='container' onSubmit={handleSignup}>
-  //     <form className='auth-form'>
-  //       <div className='form-title'>Signup</div>
-  //       <div className='form-group'>
-  //         <label htmlFor='name'>First Name</label>
-  //         <input
-  //           type='text'
-  //           name='name'
-  //           onChange={(e) => setFirstName(e.target.value)}
-  //         />
-  //       </div>
-  //       <div className='form-group'>
-  //         <label htmlFor='surname'>Last Name</label>
-  //         <input
-  //           type='text'
-  //           name='surname'
-  //           onChange={(e) => setLastName(e.target.value)}
-  //         />
-  //       </div>
-  //       <div className='form-group'>
-  //         <label htmlFor='email'>Email</label>
-  //         <input
-  //           type='text'
-  //           name='email'
-  //           onChange={(e) => setEmail(e.target.value)}
-  //         />
-  //       </div>
-  //       <div className='form-group'>
-  //         <label htmlFor='password'>Password</label>
-  //         <input
-  //           type='password'
-  //           name='password'
-  //           onChange={(e) => setPassword(e.target.value)}
-  //         />
-  //       </div>
-  //       <div className='form-group'>
-  //         <label htmlFor='confirm-password'>Confirm Password</label>
-  //         <input
-  //           type='password'
-  //           name='confirm-password'
-  //           onChange={(e) => setConfPassword(e.target.value)}
-  //         />
-  //       </div>
-
-  //       <button className='btn' type='submit'>
-  //         Signup
-  //       </button>
-
-  //       <div className='form-link'>
-  //         Already have an account?
-  //         <Link className='link auth-link' to='/login'>
-  //           Login
-  //         </Link>
-  //       </div>
-  //     </form>
-  //   </div>
-  // );
 }
 
 export default Signup;

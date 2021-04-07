@@ -106,18 +106,13 @@ function Detail(props) {
               </Link>
             </>
           ) : userRole === 'user' ? (
-            // <button
-            //   className='detail__btn detail__btn--tocart'
-            //   onClick={() => dispatch(addProductCart(props.match.params.id))}
-            // >
-            //   Add to Cart
-            // </button>
             <button
               className='detail__btn detail__btn--tocart'
-              onClick={() => dispatch(addProductCartII(localData))}
+              onClick={() => dispatch(addProductCart(props.match.params.id))}
             >
               Add to Cart
             </button>
+           
           ) : (
             userItem
           )}
